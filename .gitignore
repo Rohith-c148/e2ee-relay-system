@@ -1,0 +1,30 @@
+# Python cache/artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local runtime/session artifacts
+session.json
+*.tmp
+
+# Local results/logs
+*.log
+
+# Exclude non-code deliverables
+submission/
+*.docx
+*.pptx
+*.zip
+*.html
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

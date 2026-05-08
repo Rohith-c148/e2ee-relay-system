@@ -1,0 +1,203 @@
+{
+  "exp1_encryption_overhead": [
+    {
+      "message_size_bytes": 64,
+      "ciphertext_size_bytes": 80,
+      "overhead_bytes": 16,
+      "overhead_pct": 25.0,
+      "avg_encrypt_us": 27.35,
+      "avg_decrypt_us": 8.59,
+      "p95_encrypt_us": 6.2,
+      "p95_decrypt_us": 5.6,
+      "throughput_encrypt_mbps": 2.34
+    },
+    {
+      "message_size_bytes": 256,
+      "ciphertext_size_bytes": 272,
+      "overhead_bytes": 16,
+      "overhead_pct": 6.25,
+      "avg_encrypt_us": 5.13,
+      "avg_decrypt_us": 4.13,
+      "p95_encrypt_us": 5.9,
+      "p95_decrypt_us": 5.5,
+      "throughput_encrypt_mbps": 49.91
+    },
+    {
+      "message_size_bytes": 512,
+      "ciphertext_size_bytes": 528,
+      "overhead_bytes": 16,
+      "overhead_pct": 3.12,
+      "avg_encrypt_us": 5.53,
+      "avg_decrypt_us": 5.35,
+      "p95_encrypt_us": 4.7,
+      "p95_decrypt_us": 4.5,
+      "throughput_encrypt_mbps": 92.54
+    },
+    {
+      "message_size_bytes": 1024,
+      "ciphertext_size_bytes": 1040,
+      "overhead_bytes": 16,
+      "overhead_pct": 1.56,
+      "avg_encrypt_us": 5.46,
+      "avg_decrypt_us": 6.43,
+      "p95_encrypt_us": 6.3,
+      "p95_decrypt_us": 6.1,
+      "throughput_encrypt_mbps": 187.65
+    },
+    {
+      "message_size_bytes": 4096,
+      "ciphertext_size_bytes": 4112,
+      "overhead_bytes": 16,
+      "overhead_pct": 0.39,
+      "avg_encrypt_us": 5.58,
+      "avg_decrypt_us": 4.88,
+      "p95_encrypt_us": 6.8,
+      "p95_decrypt_us": 4.8,
+      "throughput_encrypt_mbps": 734.29
+    },
+    {
+      "message_size_bytes": 16384,
+      "ciphertext_size_bytes": 16400,
+      "overhead_bytes": 16,
+      "overhead_pct": 0.1,
+      "avg_encrypt_us": 9.66,
+      "avg_decrypt_us": 7.7,
+      "p95_encrypt_us": 10.3,
+      "p95_decrypt_us": 9.5,
+      "throughput_encrypt_mbps": 1696.24
+    }
+  ],
+  "exp2_key_rotation": [
+    {
+      "rotation_interval": 1,
+      "rotation_count": 99,
+      "rotation_overhead_pct": 99.0,
+      "avg_rotation_time_us": 19.06,
+      "total_enc_time_ms": 1.223,
+      "forward_secrecy_window_msgs": 1
+    },
+    {
+      "rotation_interval": 5,
+      "rotation_count": 19,
+      "rotation_overhead_pct": 19.0,
+      "avg_rotation_time_us": 11.49,
+      "total_enc_time_ms": 0.561,
+      "forward_secrecy_window_msgs": 5
+    },
+    {
+      "rotation_interval": 10,
+      "rotation_count": 9,
+      "rotation_overhead_pct": 9.0,
+      "avg_rotation_time_us": 97.98,
+      "total_enc_time_ms": 0.662,
+      "forward_secrecy_window_msgs": 10
+    },
+    {
+      "rotation_interval": 20,
+      "rotation_count": 4,
+      "rotation_overhead_pct": 4.0,
+      "avg_rotation_time_us": 12.88,
+      "total_enc_time_ms": 0.518,
+      "forward_secrecy_window_msgs": 20
+    },
+    {
+      "rotation_interval": 50,
+      "rotation_count": 1,
+      "rotation_overhead_pct": 1.0,
+      "avg_rotation_time_us": 14.8,
+      "total_enc_time_ms": 0.415,
+      "forward_secrecy_window_msgs": 50
+    },
+    {
+      "rotation_interval": 100,
+      "rotation_count": 0,
+      "rotation_overhead_pct": 0.0,
+      "avg_rotation_time_us": 0,
+      "total_enc_time_ms": 0.684,
+      "forward_secrecy_window_msgs": 100
+    }
+  ],
+  "exp3_replay_resistance": {
+    "valid_messages_delivered": 200,
+    "nonce_replay_attempts": 50,
+    "nonce_replay_rejections": 50,
+    "nonce_rejection_rate_pct": 100.0,
+    "sequence_replay_attempts": 50,
+    "sequence_replay_rejections": 50,
+    "sequence_rejection_rate_pct": 100.0,
+    "total_relay_rejections": 100
+  },
+  "exp4_concurrency": [
+    {
+      "num_clients": 1,
+      "total_messages": 20,
+      "wall_time_s": 0.0028,
+      "throughput_msgs_per_sec": 7084.4,
+      "avg_latency_ms": 0.01,
+      "p95_latency_ms": 0.059,
+      "p99_latency_ms": 0.059
+    },
+    {
+      "num_clients": 5,
+      "total_messages": 100,
+      "wall_time_s": 0.0057,
+      "throughput_msgs_per_sec": 17488.6,
+      "avg_latency_ms": 0.011,
+      "p95_latency_ms": 0.013,
+      "p99_latency_ms": 0.047
+    },
+    {
+      "num_clients": 10,
+      "total_messages": 200,
+      "wall_time_s": 0.0076,
+      "throughput_msgs_per_sec": 26242.2,
+      "avg_latency_ms": 0.009,
+      "p95_latency_ms": 0.025,
+      "p99_latency_ms": 0.068
+    },
+    {
+      "num_clients": 20,
+      "total_messages": 400,
+      "wall_time_s": 0.008,
+      "throughput_msgs_per_sec": 50153.0,
+      "avg_latency_ms": 0.004,
+      "p95_latency_ms": 0.004,
+      "p99_latency_ms": 0.029
+    },
+    {
+      "num_clients": 50,
+      "total_messages": 1000,
+      "wall_time_s": 0.0206,
+      "throughput_msgs_per_sec": 48527.7,
+      "avg_latency_ms": 0.005,
+      "p95_latency_ms": 0.006,
+      "p99_latency_ms": 0.021
+    }
+  ],
+  "exp5_metadata_exposure": {
+    "observable_fields": [
+      "sender_id",
+      "receiver_id",
+      "session_id",
+      "sequence_number",
+      "message_size",
+      "timestamp"
+    ],
+    "hidden_fields": [
+      "plaintext_content",
+      "encryption_key",
+      "raw_nonce",
+      "associated_data"
+    ],
+    "total_messages_observed": 100,
+    "unique_senders": 1,
+    "unique_receivers": 1,
+    "avg_message_size_bytes": 412.8,
+    "message_size_variance": 123128.2,
+    "avg_inter_arrival_ms": 100.01,
+    "timing_analysis_possible": true,
+    "traffic_analysis_possible": true,
+    "communication_graph_observable": true,
+    "content_protected": true
+  }
+}
